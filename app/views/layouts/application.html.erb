@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<div>
+  <% if current_customer %>
+    logged in as <%= current_customer.name %>
+    <%= link_to 'Sign out', session_path("current"), method: :delete %>
+  <% end %>
+
 <%= yield %>
 
 </body>
