@@ -1,13 +1,17 @@
 <h1> Customer Personal Page</h1>
 
 <div>
-  User Profile Information
+  Customer Profile Information
   <div>
+<div>
+  <%= link_to 'Update Profile', edit_customer_path(current_customer) %>
+</div>
     <%= current_customer.name %>
   </div>
   <div>
     <%= current_customer.email %>
   </div>
+
 <div>
 
 <div>
