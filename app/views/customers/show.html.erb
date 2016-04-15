@@ -4,7 +4,11 @@
   Customer Profile Information
   <div>
 <div>
-  <%= link_to 'Update Profile', edit_customer_path(current_customer) %>
+  <%= link_to 'Update profile', edit_customer_path(current_customer) %>
+</div>
+
+<div>
+  <%= link_to 'Delete profile', current_customer, method: :delete, data: {confirm: "Are you sure you want to leave us?"} %>
 </div>
     <%= current_customer.name %>
   </div>

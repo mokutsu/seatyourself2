@@ -31,6 +31,9 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer = Customer.find(params[:id])
+    @customer.destroy
+        session[:customer_id] = nil
+    redirect_to restaurants_path
   end
 
   private
