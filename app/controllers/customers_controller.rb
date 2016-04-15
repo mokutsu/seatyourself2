@@ -16,6 +16,23 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    if @customer.update_attributes(customer_params)
+      redirect_to customer_path(current_customer)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @customer = Customer.find(params[:id])
+  end
+
   private
   def customer_params
     params.require(:customer).permit(:name, :email, :password, :password_confirmation)
