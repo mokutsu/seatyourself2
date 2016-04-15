@@ -15,8 +15,11 @@
   <nav id="main-menu">
     <% if current_customer %>
       logged in as <%= current_customer.name %>
+
       <%= link_to 'Sign out', session_path(session[:customer_id]), method: :delete, class: "btn"%>
 
+      <%= link_to 'View User Profile', customer_path(current_customer) %>
+      
     <% else %>
     <div class="nav_link">
       <%= link_to 'Sign up', new_customer_path%>

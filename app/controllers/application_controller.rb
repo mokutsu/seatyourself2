@@ -7,12 +7,19 @@ class ApplicationController < ActionController::Base
     @current_customer ||= session[:customer_id] && Customer.find(session[:customer_id])
   end
 
+  helper_method :current_customer
+
   def ensure_logged_in
     unless current_customer
       flash[:alert] = 'Please log in!'
       redirect_to new_session_path
-    end 
+    end
   end
 
-  helper_method :current_customer
+  def chop_time(time)
+    time.strftime("%H:%M%p")
+  end
+
+  helper_method :chop_time
+
 end

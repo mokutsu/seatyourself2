@@ -5,7 +5,7 @@ class ReservationsController < ApplicationController
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.customer = current_customer
-    
+
 
     if @reservation.save
       redirect_to restaurants_path, notice: "Reservation successful! Mission accomplished."
@@ -14,6 +14,7 @@ class ReservationsController < ApplicationController
     end
 
   end
+
 
   private
   def reservation_params
