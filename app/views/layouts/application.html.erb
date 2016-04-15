@@ -7,20 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 
-<header>
-  <div>
+<body>
+  <header id="header">
+    <div id="logo">
+      OT
+    </div>
+  <nav id="main-menu">
     <% if current_customer %>
       logged in as <%= current_customer.name %>
-      <%= link_to 'Sign out', session_path(session[:customer_id]), method: :delete%>
+      <%= link_to 'Sign out', session_path(session[:customer_id]), method: :delete, class: "btn"%>
 
     <% else %>
-      <%= link_to 'Sign up', new_customer_path, class: "btn"%>
-      <%= link_to 'Log in', new_session_path, class: "btn" %>
-    <% end %>
+    <div class="nav_link">
+      <%= link_to 'Sign up', new_customer_path%>
+    </div>
 
-  </div>
+    <div class="nav_link">
+      <%= link_to 'Log in', new_session_path%>
+    </div>
+    <% end %>
+  </nav>
 </header>
-<body>
+
     <%= yield %>
 
 </body>

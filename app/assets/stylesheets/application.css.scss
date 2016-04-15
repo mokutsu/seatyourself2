@@ -1,0 +1,76 @@
+@import "bootstrap";
+
+html, body {
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: crosshair; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+#logo{
+  border-radius: 50%;
+  color: white;
+  border: solid white 2px;
+  display: inline-block;
+  margin: 10px;
+  margin-left: 25px;
+  font-size: 25px;
+  padding: 6px;
+}
+.nav_link a {
+  color: lightgrey;
+  text-decoration: none;
+  border: solid 2px black;
+  padding: 7px;
+}
+
+.nav_link a:hover{
+  text-decoration: none;
+  border: solid 2px lightgrey;
+  padding: 7px;
+  color: lightgrey;
+}
+.page-wrapper {
+  position: relative;
+  max-width: 95%;
+  margin: 0 auto; }
+
+#header{
+  background-color: black;
+  opacity: 0.9;
+  height:70px;
+}
+
+.carousel,
+.item,
+.active {
+    height:600px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.nav_link{
+  display: inline-block;
+  margin: 25px 10px;
+}
+
+#main-menu{
+  margin-right: 30px;
+    float: right;
+}
+
+.carousel_desc{
+  margin-bottom: 200px;
+  font-size: 40px;
+  background-color: black;
+  opacity: 0.5;
+}
