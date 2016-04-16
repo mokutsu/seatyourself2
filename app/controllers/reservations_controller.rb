@@ -28,7 +28,7 @@ end
   def update
     @reservation = Reservation.find(params[:id])
     if @reservation.update_attributes(reservation_params)
-      redirect_to customer_path(current_customer)
+      redirect_to customer_path(current_customer), notice: "Reservation successfully updated!"
     else
       render :edit
     end
@@ -39,7 +39,7 @@ end
     @restaurant = Restaurant.find_by(id: @reservation.restaurant_id)
 
     @reservation.destroy
-    redirect_to customer_path(current_customer)
+    redirect_to customer_path(current_customer), notice: "Reservation successfully deleted."
   end
   private
   def reservation_params

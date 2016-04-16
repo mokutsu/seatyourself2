@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-        redirect_to restaurants_path
+        redirect_to new_session_path
     else
         render :new
     end
@@ -23,7 +23,7 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find(params[:id])
     if @customer.update_attributes(customer_params)
-      redirect_to customer_path(current_customer)
+      redirect_to customer_path(current_customer), notice: "Customer profile successfully updated."
     else
       render :edit
     end
@@ -33,7 +33,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
     @customer.destroy
         session[:customer_id] = nil
-    redirect_to restaurants_path
+    redirect_to restaurants_path, notice: "Profile successfully deleted. We hope you join us again some day!"
   end
 
   private
