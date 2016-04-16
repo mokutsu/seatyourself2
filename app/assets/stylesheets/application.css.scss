@@ -24,6 +24,11 @@ img {
   font-size: 25px;
   padding: 6px;
 }
+
+#logo a{
+  color: white;
+  text-decoration: none;
+}
 .nav_link a {
   color: lightgrey;
   text-decoration: none;
@@ -73,4 +78,8 @@ img {
   font-size: 40px;
   background-color: black;
   opacity: 0.5;
+}
+
+.flash_notices{
+  font-size: 15px;
 }

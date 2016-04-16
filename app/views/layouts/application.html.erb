@@ -10,15 +10,15 @@
 <body>
   <header id="header">
     <div id="logo">
-      OT
-    </div>
+    <%= link_to 'OT', restaurants_path %>
+  </div>
   <nav id="main-menu">
     <% if current_customer %>
       Hi, <%= current_customer.name %>
 
       <%= link_to 'Sign out', session_path(session[:customer_id]), method: :delete, class: "btn"%>
 
-      <%= link_to 'View User Profile', customer_path(current_customer) %>
+      <%= link_to 'View User Profile', customer_path(current_customer), class: "btn"%>
 
     <% else %>
     <div class="nav_link">
@@ -32,13 +32,14 @@
   </nav>
 </header>
 
+<div class='flash_notices'>
 <% if flash[:notice] %>
   <p id='notice'><%= flash[:notice] %></p>
 <% end %>
 <% if flash[:alert] %>
   <p id="alert"><%= flash[:alert] %></p>
   <% end %>
-
+</div>
 <%= yield %>
 
 </body>
