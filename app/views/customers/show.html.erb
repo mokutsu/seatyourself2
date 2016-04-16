@@ -22,7 +22,10 @@
 Reservations:
   <% current_customer.reservations.each do |reservation| %>
     <ul>
-      <li> <%= reservation.restaurant.name %> <%= reservation.date %> <%= chop_time(reservation.time) %> </li>
+      <li> <%= reservation.restaurant.name %> <%= reservation.date %> <%= chop_time(reservation.time) %>
+      </li><%= link_to 'View Reservation Details', restaurant_reservation_path(restaurant_id: reservation.restaurant_id, id: reservation.id) %>
     </ul>
   <% end%>
+
+  <%= link_to'back to main page', restaurants_path %>
 </div>
