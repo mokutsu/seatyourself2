@@ -1,6 +1,4 @@
 
-<% puts params.inspect %>
-
 <div>
 Reservation Details
 <%= @reservation.date %>
@@ -27,14 +25,9 @@ Update Details
 
     <div>
 
-      <% @form_time_range = [] %>
-      <%  time_option = @restaurant.opening %>
-      <% while time_option < @restaurant.closing  %>
-      <%  @form_time_range << time_option %>
-      <%  time_option = time_option+1.hour %>
-    <%  end %>
-
-      <%= f.select :time, options_for_select(@form_time_range, @form_time_range) %>
+      <% dropdown = @restaurant.time_range(@restaurant) %>
+      <% time_options = @restaurant.time_range_show(dropdown) %>
+      <%= f.select :time, options_for_select(time_options, dropdown)%>
     <div>
       <%= f.label :party_size %>
       <%= f.number_field :party_size %>

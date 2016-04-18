@@ -10,11 +10,24 @@ class Restaurant < ActiveRecord::Base
      current_capacity(time) - party_size
    end
 
+   def time_range(restaurant)
+     form_time_range = []
+     time_option = restaurant.opening
+     while time_option < restaurant.closing
+      form_time_range << time_option
+       time_option = time_option+1.hour
+     end
+     form_time_range
+   end
 
+   def time_range_show(form_time)
+     time_options = form_time.map {|time| time.strftime("%H:%M%p") }
+   end
 
+# helper_method :time_range
    private
    def current_capacity(time)
-     if self.reservations.empty? 
+     if self.reservations.empty?
        capacity
      else
      capacity - reserved_capacity(time)
