@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to restaurants_url, notice: "Reservation successful! Mission accomplished."
     else
-      render 'restaurants/show', notice: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
+      render 'restaurants/show', alert: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
     end
 
   end
@@ -30,7 +30,8 @@ end
     if @reservation.update_attributes(reservation_params)
       redirect_to customer_path(current_customer), notice: "Reservation successfully updated!"
     else
-      render :edit
+      @reservation = Reservation.find(params[:id])
+      render 'reservations/show', alert: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
     end
   end
 
