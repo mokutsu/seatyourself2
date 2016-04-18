@@ -8,9 +8,9 @@ class ReservationsController < ApplicationController
 
 
     if @reservation.save
-      redirect_to restaurants_path, notice: "Reservation successful! Mission accomplished."
+      redirect_to restaurants_url, notice: "Reservation successful! Mission accomplished."
     else
-      render restaurant_path(@restaurant), notice: "Error: Please try again."
+      render 'restaurants/show', notice: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
     end
 
   end
