@@ -12,7 +12,7 @@ class Reservation < ActiveRecord::Base
 
   def capacity_available
     if self.restaurant.availability(self.party_size, self.time) < 0
-    errors.add(:party_size, "Inadequate capacity")
+    errors.add(:party_size, "inadequate capacity")
     end
   end
 

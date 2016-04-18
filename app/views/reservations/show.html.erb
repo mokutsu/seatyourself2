@@ -26,10 +26,26 @@ Update Details
     </div>
 
     <div>
+
+      <%   @form_time_range = (@restaurant.opening.hour..@restaurant.closing.hour) %>
+      <% %form_time_view = (@restaurant.opening.)
+            <%= f.select :time, options_for_select(@form_time_range, @form_time_range) %>
+
+            <% if false %>
+            <%= f.collection_select(:time, @form_time_range, :time, @form_time_range) %>
+
+      # options_for_select([["Dollar", "$"], ["Kroner", "DKK"]])
+      # # => <option value="$">Dollar</option>
+      # # => <option value="DKK">Kroner</option>
+      # -->
       <%= f.label :time %>
       <%= f.time_field :time %>
     </div>
-
+<% end %>
+    <div>
+      <%= f.label :party_size %>
+      <%= f.number_field :party_size %>
+    </div>
     <div>
       <%= f.submit %>
     </div>

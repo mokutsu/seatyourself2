@@ -7,6 +7,7 @@ class ReservationsController < ApplicationController
     @reservation.customer = current_customer
 
 
+
     if @reservation.save
       redirect_to restaurants_url, notice: "Reservation successful! Mission accomplished."
     else

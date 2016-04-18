@@ -17,3 +17,6 @@ subway = Restaurant.create(name: 'Subway', opening: '2000-01-01 12:00:00' , clos
 kupert_kim = Restaurant.create(name:'Kupert and Kim', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://pbs.twimg.com/profile_images/3099595511/f3196239dc69a368b72d8928590decc1_400x400.png", capacity: 1000, category_id: 2)
 
 reservation1 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 16:00:00', party_size: 5)
+
+
+reservation2 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 18:00:00', party_size: 5)
