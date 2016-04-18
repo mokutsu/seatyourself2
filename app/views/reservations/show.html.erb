@@ -3,6 +3,8 @@
 
 <div>
 Reservation Details
+<%= @reservation.date %>
+<%=@reservation.time%>
     <ul>
       <li> Location: <%= @reservation.restaurant.name %> </li>
       <li> Date: <%= @reservation.date %> </li>

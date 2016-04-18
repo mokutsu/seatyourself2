@@ -1,4 +1,14 @@
 
+<div class = 'flash_notices'>
+  <% if @customer.errors.any? %>
+    <% @customer.errors.full_messages.each do |msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+    <% end %>
+  <% end %>
+</div>
+
 <div>
   <%= form_for @customer do |f| %>
     <div>
