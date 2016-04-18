@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-burger_king = Restaurant.create(name: 'Burger King')
-taco_bell = Restaurant.create(name: 'Taco Bell')
-subway = Restaurant.create(name: 'Subway')
-kupert_kim = Restaurant.create(name:'Kupert and Kim')
+
+burger_king = Restaurant.create(name: 'Burger King', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00' )
+taco_bell = Restaurant.create(name: 'Taco Bell', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00' )
+subway = Restaurant.create(name: 'Subway', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00' )
+kupert_kim = Restaurant.create(name:'Kupert and Kim', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00' )
