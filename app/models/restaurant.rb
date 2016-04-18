@@ -7,6 +7,7 @@ class Restaurant < ActiveRecord::Base
 
 
   def availability(party_size, time)
+     
      current_capacity(time) - party_size
    end
 

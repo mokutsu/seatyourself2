@@ -8,10 +8,15 @@
   </div>
 
   <div>
+    <% dropdown = @restaurant.time_range(@restaurant) %>
+    <% time_options = @restaurant.time_range_show(dropdown) %>
     <%= f.label :time %>
-    <%= f.time_field :time %>
+    <%= f.select :time, options_for_select(time_options, dropdown)%>
   </div>
-
+  <div>
+    <%= f.label :party_size %>
+    <%= f.number_field :party_size %>
+  </div>
   <div>
     <%= f.submit %>
   </div>
