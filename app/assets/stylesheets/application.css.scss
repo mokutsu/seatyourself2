@@ -19,6 +19,13 @@ img {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+a {
+  color: black;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 #logo{
   border-radius: 50%;
   color: white;
@@ -43,7 +50,8 @@ img {
 }
 
 .nav_link a:hover{
-  font-weight: bold;
+  background-color: white;
+  color: $red;
 }
 .page-wrapper {
   position: relative;

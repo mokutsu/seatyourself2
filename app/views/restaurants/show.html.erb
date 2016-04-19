@@ -1,24 +1,25 @@
 <div class= "reservation_container">
-    <h1> Make a Reservation </h1>
+    <h1 class="reserve_title"> Make a Reservation </h1>
 
 <%= form_for [@restaurant, @reservation] do |f| %>
-  <div>
-  <%= f.label :date %>
-  <%= f.date_field :date  %>
+<div class="form_field">
+  <%= f.label :date %><br>
+  <%= f.date_field :date, class:'form_box' %>
   </div>
 
-  <div>
+  <div class="form_field">
     <% dropdown = @restaurant.time_range(@restaurant) %>
     <% time_options = @restaurant.time_range_show(dropdown) %>
-    <%= f.label :time %>
+    <%= f.label :time %><br>
     <%= f.select :time, options_for_select(time_options, dropdown)%>
   </div>
-  <div>
-    <%= f.label :party_size %>
+
+  <div class="form_field">
+    <%= f.label :party_size%><br>
     <%= f.number_field :party_size %>
   </div>
-  <div>
-    <%= f.submit %>
+  <div class="form_field">
+    <%= f.submit 'Find a Table', :class=>"form_button" %>
   </div>
 <% end %>
 <%= link_to 'Update Restaurant', edit_restaurant_path %>

@@ -46,8 +46,15 @@
 </section>
 
 <section id="restaurants_container">
+  <% if current_customer %>
+    <%= link_to 'Add a Restaurant', new_restaurant_path, class:'add_resto' %>
+  <%end%>
+
   <h2 class="rest_title">Discover New Restaurants</h2>
   <p class="rest_desc">Treat Your Tastebuds. Eat anywhere, at any time. </p>
+
+
+
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant">
       <div class="restaurant_image">
@@ -57,5 +64,5 @@
       <p class="restaurant_category"><%=restaurant.category.name%></p>
     </div>
   <% end %>
-  <%= link_to 'Crete a new restaurant', new_restaurant_path %>
+
 </section>
