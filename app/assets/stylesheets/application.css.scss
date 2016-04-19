@@ -1,5 +1,10 @@
-@import "bootstrap";
+
 @import 'restaurants';
+@import 'sessions';
+@import 'customers';
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 $red: #da3743;
 
 html, body {
@@ -17,7 +22,8 @@ img {
   height: auto; }
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing:inherit;
+}
 
 a {
   color: black;
@@ -62,4 +68,62 @@ a {
   background-color:$red;
   opacity: 0.9;
   height:70px;
+}
+
+.btn {
+  color: white;
+  line-height: 70px;
+  font-size: 16px;
+}
+
+#footer{
+  clear: both;
+  height:150px;
+  background-color: $red;
+  margin-bottom: 0;
+  margin-top: 20px;
+  width:100%;
+
+  ul{
+    list-style: none;
+    float: left;
+    margin-left: 30px;
+  }
+  li{
+    display: inline-block;
+    line-height: 100px;
+    padding: 0 15px;
+    font-size: 13px;
+
+  }
+  a{
+      color: white;
+  &:hover{
+      color:$red;
+    }
+  }
+}
+
+.social_container{
+  display: inline-block;
+  border: solid red;
+  margin: 0 10%;
+}
+
+.social_title{
+  color: white;
+ font-size: 16px;
+ text-align: center;
+}
+
+.fa {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+.social_links{
+  border: solid red;
+  margin: 0 auto;
+
+
 }

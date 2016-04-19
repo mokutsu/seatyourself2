@@ -10,7 +10,6 @@ $red: #da3743;
     height: 100%;
 }
 
-
 .nav_link{
   display: inline-block;
   margin: 25px 10px;
@@ -49,7 +48,7 @@ $red: #da3743;
 /*** RESTAURANT SECTION *****/
 
 #restaurants_container{
-  width:85%;
+  width:90%;
   margin: 0 auto;
   border-bottom: solid 1px darkgrey;
 }
@@ -117,7 +116,8 @@ $red: #da3743;
   font-size: 14px;
   background-color: $red;
   letter-spacing: 1px;
-  margin-right: 180px;
+  position: absolute;
+  margin-left: 800px;
 }
 
 .form_field,{
@@ -145,4 +145,21 @@ $red: #da3743;
 
 .form_box {
  padding: 5px;
+}
+
+.about_resto{
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.about_resto_img{
+ display: block;
+}
+
+.about_resto_desc{
+  margin-top: 20px;
+}
+
+.about_resto_name{
+  color: $red;
 }
