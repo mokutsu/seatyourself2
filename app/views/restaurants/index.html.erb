@@ -14,6 +14,7 @@
        <img src="https://drscdn.500px.org/photo/original/store/139863569/m%3D900_k%3D2_b%3D2_dpi%3D300_attachment%3D1_tags%3D1/5b55eaaae444ba161b589ef7c2ef6a88" width="1400px">
        <div class="carousel-caption">
         <p class="carousel_desc">Book Tables With Ease.</p>
+      <!-- </div> -->
       </div>
     </div>
 
@@ -45,9 +46,15 @@
 </section>
 
 <section id="restaurants_container">
+  <h2 class="rest_title">Discover New Restaurants</h2>
+  <p class="rest_desc">Treat Your Tastebuds. Eat anywhere, at any time. </p>
   <% @restaurants.each do |restaurant| %>
-    <div>
-      Restaurant name: <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    <div class="restaurant">
+      <div class="restaurant_image">
+        <%= link_to image_tag(restaurant.img_link),restaurant_path(restaurant)%>
+      </div>
+      <p class="restaurant_name"><%=restaurant.name%></p>
+      <p class="restaurant_category"><%=restaurant.category.name%></p>
     </div>
   <% end %>
 </section>

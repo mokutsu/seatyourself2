@@ -1,18 +1,18 @@
-<h1>Restaurant Page</h1>
+<div class= "reservation_container">
+    <h1> Make a Reservation </h1>
+    <%= form_for [@restaurant, @reservation] do |f| %>
+      <div>
+      <%= f.label :date %>
+      <%= f.date_field :date  %>
+      </div>
 
+      <div>
+        <%= f.label :time %>
+        <%= f.time_field :time %>
+      </div>
 
-<%= form_for [@restaurant, @reservation] do |f| %>
-  <div>
-  <%= f.label :date %>
-  <%= f.date_field :date  %>
-  </div>
-
-  <div>
-    <%= f.label :time %>
-    <%= f.time_field :time %>
-  </div>
-
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div>
+        <%= f.submit %>
+      </div>
+    <% end %>
+</div>

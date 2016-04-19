@@ -1,11 +1,16 @@
 @import "bootstrap";
+@import 'restaurants';
+$red: #da3743;
 
 html, body {
   font-size: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: crosshair; }
+  cursor: crosshair;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+ }
 
 img {
   max-width: 100%;
@@ -30,17 +35,15 @@ img {
   text-decoration: none;
 }
 .nav_link a {
-  color: lightgrey;
+  color: white;
   text-decoration: none;
-  border: solid 2px black;
-  padding: 7px;
+  border: solid 3px white;
+  padding: 8px;
+  border-radius: 12px;
 }
 
 .nav_link a:hover{
-  text-decoration: none;
-  border: solid 2px lightgrey;
-  padding: 7px;
-  color: lightgrey;
+  font-weight: bold;
 }
 .page-wrapper {
   position: relative;
@@ -48,43 +51,7 @@ img {
   margin: 0 auto; }
 
 #header{
-  background-color: black;
+  background-color:$red;
   opacity: 0.9;
   height:70px;
-}
-
-.carousel,
-.item,
-.active {
-    height:600px;
-}
-
-.carousel-inner {
-    height: 100%;
-}
-
-.nav_link{
-  display: inline-block;
-  margin: 25px 10px;
-}
-
-#main-menu{
-  margin-right: 30px;
-    float: right;
-}
-
-.carousel_desc{
-  margin-bottom: 200px;
-  font-size: 40px;
-  background-color: black;
-  opacity: 0.5;
-}
-
-.flash_notices{
-  font-size: 15px;
-}
-
-.flash_notices ul{
-  font-size: 12px;
-  line-height: 50%;
 }
