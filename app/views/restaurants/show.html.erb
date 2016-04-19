@@ -22,6 +22,7 @@
     <%= f.submit 'Find a Table', :class=>"form_button" %>
   </div>
 <% end %>
+<<<<<<< HEAD
 
 <h2 class="about_resto">About Restaurant : <span class="about_resto_name"><%=@restaurant.name%></span></h2>
 <div class="about_resto_img">
@@ -31,4 +32,7 @@
 
 
 <%= link_to 'Update Restaurant', edit_restaurant_path %>
+=======
+<%= link_to 'Update Restaurant', @restaurant %>
+>>>>>>> 928323b1bcfe34152ac3e0fbba812007a86af3f9
 <%= link_to 'Delete Restaurant', @restaurant, method: :delete,  data: {confirm: "Are you sure you want to delete this restaurant"}  %>
