@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only:[:create, :new, :destroy]
   resources :customers, except: [:index]
-  resources :restaurants, only:[:show, :index] do
-  resources :reservations
+  resources :restaurants do #,only:[:show, :index] do
+    resources :reservations
   end
 
 end

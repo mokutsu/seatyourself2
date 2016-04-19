@@ -15,3 +15,8 @@ burger_king = Restaurant.create(name: 'Burger King', opening: '2000-01-01 12:00:
 taco_bell = Restaurant.create(name: 'Taco Bell', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://drscdn.500px.org/photo/120365635/q%3D80_m%3D1000_k%3D1/9849e50cc8cd9967d121390346881f1b", capacity: 100, category_id: 4)
 subway = Restaurant.create(name: 'Subway', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://drscdn.500px.org/photo/120365635/q%3D80_m%3D1000_k%3D1/9849e50cc8cd9967d121390346881f1b", capacity: 20, category_id: 1)
 kupert_kim = Restaurant.create(name:'Kupert and Kim', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://drscdn.500px.org/photo/120365635/q%3D80_m%3D1000_k%3D1/9849e50cc8cd9967d121390346881f1b", capacity: 1000, category_id: 2)
+
+reservation1 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 16:00:00', party_size: 5)
+
+
+reservation2 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 18:00:00', party_size: 5)

@@ -7,6 +7,7 @@ class ReservationsController < ApplicationController
     @reservation.customer = current_customer
 
 
+
     if @reservation.save
       redirect_to restaurants_url, notice: "Reservation successful! Mission accomplished."
     else
@@ -44,7 +45,7 @@ end
   end
   private
   def reservation_params
-    params.require(:reservation).permit(:date, :time, :restaurant_id)
+    params.require(:reservation).permit(:date, :time, :restaurant_id, :party_size)
   end
 
   def load_restaurant

@@ -1,6 +1,4 @@
 
-<% puts params.inspect %>
-
 <div>
 Reservation Details
 <%= @reservation.date %>
@@ -10,6 +8,7 @@ Reservation Details
       <li> Date: <%= @reservation.date %> </li>
       <li> Time: <%= chop_time(@reservation.time) %>
       </li>
+      <li> Party Size: <%= @reservation.party_size %>
     </ul>
 </div>
 
@@ -26,10 +25,15 @@ Update Details
     </div>
 
     <div>
-      <%= f.label :time %>
-      <%= f.time_field :time %>
-    </div>
 
+      <% dropdown = @restaurant.time_range(@restaurant) %>
+      <% time_options = @restaurant.time_range_show(dropdown) %>
+      <%= f.label :time %>
+      <%= f.select :time, options_for_select(time_options, dropdown)%>
+    <div>
+      <%= f.label :party_size %>
+      <%= f.number_field :party_size %>
+    </div>
     <div>
       <%= f.submit %>
     </div>
