@@ -14,7 +14,7 @@
   </div>
   <nav id="main-menu">
     <% if current_customer %>
-      Hi, <%= current_customer.name %>
+    <div class="btn">  Hi, <%= current_customer.name%></div>
 
       <%= link_to 'Sign out', session_path(session[:customer_id]), method: :delete, class: "btn"%>
 
@@ -41,7 +41,26 @@
   <p id="alert"><%= flash[:alert] %></p>
   <% end %>
 </div>
+
 <%= yield %>
+
+<footer id="footer">
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+
+  <div class="social_container">
+    <h3 class="social_title"> Let's be Social</h3>
+    <ul>
+      <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+      <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+      <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+</footer>
 
 </body>
 </html>

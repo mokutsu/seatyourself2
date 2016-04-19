@@ -1,3 +1,19 @@
 // Place all the styles related to the customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  background-color: #F7F3DF;
+}
+ .profile_container{
+   width: 50%;
+   margin: 0 auto;
+   background-color: white;
+   padding: 10px;
+   margin-top: 40px;
+ }
+
+ .profile_title{
+   font-size: 28px;
+   letter-spacing: 1px;
+ }

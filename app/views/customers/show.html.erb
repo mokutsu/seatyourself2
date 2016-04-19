@@ -1,8 +1,7 @@
-<h1> Customer Personal Page</h1>
+<div class="profile_container">
+<h1 class="profile_title"> My Profile</h1>
 
-<div>
-  Customer Profile Information
-  <div>
+
 <div>
   <%= link_to 'Update profile', edit_customer_path(current_customer) %>
 </div>
@@ -10,13 +9,14 @@
 <div>
   <%= link_to 'Delete profile', current_customer, method: :delete, data: {confirm: "Are you sure you want to leave us?"} %>
 </div>
+
+  <div>
     <%= current_customer.name %>
   </div>
+
   <div>
     <%= current_customer.email %>
   </div>
-
-<div>
 
 <div>
 Reservations:
@@ -28,4 +28,5 @@ Reservations:
   <% end%>
 
   <%= link_to'back to main page', restaurants_path %>
+</div>
 </div>
