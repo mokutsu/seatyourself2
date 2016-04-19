@@ -18,5 +18,6 @@ kupert_kim = Restaurant.create(name:'Kupert and Kim', opening: '2000-01-01 12:00
 
 reservation1 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 16:00:00', party_size: 5)
 
+admin = Customer.create(name: 'admin', email: 'admin@admin.admin', password: 'admin', password_confirmation: 'admin', account_type:'admin')
 
 reservation2 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 18:00:00', party_size: 5)

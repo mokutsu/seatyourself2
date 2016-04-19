@@ -3,7 +3,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
+
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
@@ -46,7 +46,7 @@
 </section>
 
 <section id="restaurants_container">
-  <% if current_customer %>
+  <% if session[:account_type] == 'admin' %>
     <%= link_to 'Add a Restaurant', new_restaurant_path, class:'add_resto' %>
   <%end%>
 
