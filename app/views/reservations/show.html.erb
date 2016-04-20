@@ -15,6 +15,16 @@ Reservation Details
 <div>
 Update Details
 
+<div class = 'flash_notices'>
+  <% if @reservation.errors.any? %>
+    <% @reservation.errors.full_messages.each do |msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+    <% end %>
+  <% end %>
+</div>
+
   <%= form_for [@restaurant, @reservation] do |f| %>
     <div>
       <%= collection_select(:reservation, :restaurant_id, Restaurant.all, :id, :name) %>
@@ -25,7 +35,6 @@ Update Details
     </div>
 
     <div>
-
       <% dropdown = @restaurant.time_range(@restaurant) %>
       <% time_options = @restaurant.time_range_show(dropdown) %>
       <%= f.label :time %>

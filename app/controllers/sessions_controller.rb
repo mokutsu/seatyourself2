@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     customer = Customer.find_by(email: params[:email])
     if customer && customer.authenticate(params[:password])
       session[:customer_id] = customer.id
+      session[:account_type] = customer.account_type
       redirect_to restaurants_path, notice: "Logged in!"
     else flash[:alert] = "user and/or password is incorrect"
       render :new
