@@ -80,9 +80,9 @@ a {
   clear: both;
   width: 100%;
   background-color: $red;
-  bottom: 0;
-  position: absolute;
-  z-index: -1;
+  bottom:0;
+  position:relative;
+
 
   ul{
     list-style: none;
