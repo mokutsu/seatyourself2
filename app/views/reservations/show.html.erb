@@ -1,8 +1,9 @@
-<div class="reservation_profile_main"
+<div class="reservation_profile_main">
 
-Reservation Details
-<%= @reservation.date %>
-<%=@reservation.time%>
+
+<h2 class="reserv_title">Reservation Details</h2>
+<% @reservation.date %>
+<%@reservation.time%>
     <ul>
       <li><span class="prof_label"> Location:</span> <%= @reservation.restaurant.name %> </li>
       <li> <span class="prof_label"> Date:</span> <%= @reservation.date %> </li>
@@ -39,10 +40,10 @@ Update Details
       <%= f.label :party_size %>
       <%= f.number_field :party_size %>
 
-      <%= f.submit %>
+      <%= f.submit 'Update', class:"form_button" %>
 
   <% end%>
 
-<%= link_to 'Delete Reservation', [@restaurant, @reservation], method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>
+<%= link_to 'Delete Reservation', [@restaurant, @reservation], method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"}, class:"form_button" %>
 
 </div>
