@@ -10,7 +10,7 @@ private
 
   helper_method :current_customer
 
-  def ensure_ _in
+  def ensure_logged_in
     unless current_customer
       flash[:alert] = 'Please log in!'
       redirect_to new_session_path
