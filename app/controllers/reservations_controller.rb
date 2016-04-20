@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
 
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = @restaurant.reservations.build(reservation_params)
-    
+
     @reservation.customer = current_customer
     if @reservation.save
       redirect_to restaurants_url, notice: "Reservation successful! Mission accomplished."
@@ -45,7 +45,7 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find_by(id: @reservation.restaurant_id)
   end
   def load_reservation
-    @reservation = Reservation.find(params[:id])
+    @reservation ||= Reservation.find(params[:id])
   end
 
 end
