@@ -5,6 +5,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'reservations';
 $red: #da3743;
 
 html, body {
@@ -30,6 +31,10 @@ a {
   &:hover{
     text-decoration: none;
   }
+}
+
+li {
+  list-style: none;
 }
 
 #logo{

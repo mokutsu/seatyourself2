@@ -1,18 +1,17 @@
+<div class="reservation_profile_main"
 
-<div>
 Reservation Details
 <%= @reservation.date %>
 <%=@reservation.time%>
     <ul>
-      <li> Location: <%= @reservation.restaurant.name %> </li>
-      <li> Date: <%= @reservation.date %> </li>
-      <li> Time: <%= chop_time(@reservation.time) %>
+      <li><span class="prof_label"> Location:</span> <%= @reservation.restaurant.name %> </li>
+      <li> <span class="prof_label"> Date:</span> <%= @reservation.date %> </li>
+      <li> <span class="prof_label"> Time:</span> <%= chop_time(@reservation.time) %>
       </li>
-      <li> Party Size: <%= @reservation.party_size %>
+      <li> <span class="prof_label"> Party Size:</span> <%= @reservation.party_size %>
     </ul>
-</div>
 
-<div>
+
 Update Details
 
 <div class = 'flash_notices'>
@@ -26,26 +25,22 @@ Update Details
 </div>
 
   <%= form_for [@restaurant, @reservation] do |f| %>
-    <div>
+
       <%= collection_select(:reservation, :restaurant_id, Restaurant.all, :id, :name) %>
-    </div>
-    <div>
+
       <%= f.label :date %>
       <%= f.date_field :date  %>
-    </div>
 
-    <div>
       <% dropdown = @restaurant.time_range(@restaurant) %>
       <% time_options = @restaurant.time_range_show(dropdown) %>
       <%= f.label :time %>
       <%= f.select :time, options_for_select(time_options, dropdown)%>
-    <div>
+
       <%= f.label :party_size %>
       <%= f.number_field :party_size %>
-    </div>
-    <div>
+
       <%= f.submit %>
-    </div>
+
   <% end%>
 
 <%= link_to 'Delete Reservation', [@restaurant, @reservation], method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>

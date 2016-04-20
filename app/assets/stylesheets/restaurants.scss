@@ -55,9 +55,10 @@ $red: #da3743;
 .restaurant{
   display: inline-block;
   float:left;
-  margin:1.75%;
+  margin:1.5%;
   border: solid 2px black;
   padding: 10px;
+  width:30%;
 }
 
 .restaurant_name{
@@ -91,8 +92,8 @@ $red: #da3743;
 }
 
 .restaurant_image{
-  max-width: 275px;
-  max-height: 275px;
+  max-width: 300px;
+  max-height: 300px;
   margin: 0 auto;
   position: relative;
 
