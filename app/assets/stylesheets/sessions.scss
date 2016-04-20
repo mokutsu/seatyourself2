@@ -1,15 +1,18 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 $red: #da3743;
 
 .login_container{
   width:30%;
 border: solid 5px $red;
   height:500px;
-  margin: 0 auto;
-  margin-top:30px;
+  margin:20px auto;
   padding: 7px;
+  background-color: white;
+}
+.login_title{
+  font-size: 18px;
+}
 
+.form_label{
+  display: inline-block;
+  color: darkgrey;
 }

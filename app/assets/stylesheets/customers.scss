@@ -2,18 +2,71 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$red: #da3743;
+
 body{
   background-color: #F7F3DF;
 }
  .profile_container{
-   width: 50%;
+   width: 30%;
+   height:400px;
    margin: 0 auto;
    background-color: white;
    padding: 10px;
    margin-top: 40px;
+
  }
 
  .profile_title{
    font-size: 28px;
    letter-spacing: 1px;
+ }
+
+ .sign_up_container{
+   width:30%;
+ border: solid 5px $red;
+   height:400px;
+   margin:20px auto;
+   padding: 7px;
+   background-color: white;
+ }
+
+ .delete_profile{
+   float: right;
+   margin-right: 35%;
+
+   a{
+     color: $red;
+     &:hover{
+      text-decoration: underline;
+     }
+   }
+
+ }
+
+ .profile_name{
+   margin-top:20px;
+ }
+
+ .update_profile {
+   display: inline-block;
+   a{
+   color: $red;
+   &:hover{
+    text-decoration: underline;
+   }
+}
+ }
+
+ .back_to{
+   bottom: 0;
+   position: relative;
+ }
+
+ .prof_label{
+   color: darkgrey;
+   letter-spacing: 1px;
+   font-size: 18px;
+   margin-right: 10px;
+
  }

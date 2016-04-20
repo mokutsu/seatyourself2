@@ -2,31 +2,29 @@
 <h1 class="profile_title"> My Profile</h1>
 
 
-<div>
+<div class="update_profile">
   <%= link_to 'Update profile', edit_customer_path(current_customer) %>
 </div>
 
-<div>
+<div class="delete_profile">
   <%= link_to 'Delete profile', current_customer, method: :delete, data: {confirm: "Are you sure you want to leave us?"} %>
 </div>
 
-  <div>
-    <%= current_customer.name %>
+  <div class="profile_name">
+    <span class="prof_label">Name:</span> <%= current_customer.name %>
   </div>
 
   <div>
-    <%= current_customer.email %>
+      <span class="prof_label">Email:</span><%= current_customer.email %>
   </div>
 
 <div>
-Reservations:
+  <span class="prof_label">Reservations:</span>
   <% current_customer.reservations.each do |reservation| %>
     <ul>
       <li> <%= reservation.restaurant.name %> <%= reservation.date %> <%= chop_time(reservation.time) %>
       </li><%= link_to 'View Reservation Details', restaurant_reservation_path(restaurant_id: reservation.restaurant_id, id: reservation.id) %>
     </ul>
   <% end%>
-
-  <%= link_to'back to main page', restaurants_path %>
 </div>
 </div>

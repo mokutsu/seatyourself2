@@ -1,21 +1,30 @@
 <div class="login_container">
 
-<h1>Log in</h1>
+<h1 class="login_title">Welcome to Seat Yourself!</h1>
 
-<div>
+<div class="login_form">
   <%= form_tag sessions_path do %>
     <div>
-      <%= label_tag :email %>
+    <div class="form_label">
+        <%= label_tag :email %>
+    </div>
+
+    <div class="form_field">
       <%= text_field_tag :email, params[:email] %>
+    </div>
+    </div>
     <div>
-    <div>
+      <div class="form_label">
       <%= label_tag :password %>
+    </div>
+
+    <div class="form_field">
       <%= password_field_tag :password, params[:password] %>
-    <div>
+    </div>
+    </div>
     <div>
       <%= submit_tag "Log in", class:'form_button' %>
     </div>
   <% end %>
-</div>
-
+</div><!-- end of login form-->
 </div>
