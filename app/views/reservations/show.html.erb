@@ -16,8 +16,8 @@
 Update Details
 
 <div class = 'flash_notices'>
-  <% if @reservation.errors.any? %>
-    <% @reservation.errors.full_messages.each do |msg| %>
+  <% if @temp_holder != nil && @temp_holder.errors.any? %>
+    <% @temp_holder.errors.full_messages.each do |msg| %>
     <ul>
       <li><%= msg %></li>
     </ul>

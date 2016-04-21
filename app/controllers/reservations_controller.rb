@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to restaurants_url, notice: "Reservation successful! Mission accomplished."
     else
-      render 'restaurants/show', alert: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
+      render 'restaurants/show', error: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
     end
 
   end
@@ -27,9 +27,15 @@ class ReservationsController < ApplicationController
     if @reservation.update_attributes(reservation_params)
       redirect_to customer_path(current_customer), notice: "Reservation successfully updated!"
     else
-      render 'reservations/show', alert: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
+      @temp_holder = @reservation
       load_reservation
+      render 'reservations/show', alert: "Error: Please try again."#restaurant_path(@restaurant), notice: "Error: Please try again."
     end
+
+  end
+
+  def keep_temp_res
+    @res_holder = @reservation
   end
 
   def destroy
@@ -47,5 +53,6 @@ class ReservationsController < ApplicationController
   def load_reservation
     @reservation = Reservation.find(params[:id])
   end
+
 
 end
