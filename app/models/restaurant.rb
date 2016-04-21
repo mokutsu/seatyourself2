@@ -9,7 +9,7 @@ class Restaurant < ActiveRecord::Base
   def availability(party_size, time)
      if party_size != nil && time != nil
        current_capacity(time) - party_size
-     end 
+     end
    end
 
    def time_range(restaurant)

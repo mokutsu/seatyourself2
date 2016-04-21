@@ -27,8 +27,8 @@
     </div>
 
     <div class="form_field">
-      <%= f.label :party_size%><br>
-      <%= f.number_field :party_size %>
+      <%= f.label :party_size %> <br>
+      <%= f.select :party_size, options_for_select((1..30),(1..30)) %>
     </div>
     <div class="form_field">
       <%= f.submit 'Find a Table', :class=>"form_button" %>
