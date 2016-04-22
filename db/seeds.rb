@@ -15,6 +15,9 @@ burger_king = Restaurant.create(name: 'Burger King', opening: '2000-01-01 12:00:
 taco_bell = Restaurant.create(name: 'Taco Bell', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://drscdn.500px.org/photo/79260211/q%3D80_m%3D2000/166fb1fa0470bdc92f60e13879c003c0", capacity: 100, category_id: 4)
 subway = Restaurant.create(name: 'Subway', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://drscdn.500px.org/photo/90151571/q%3D80_h%3D450/7a3d459f9513ed9d2283f21d07e6b65a", capacity: 20, category_id: 1)
 kupert_kim = Restaurant.create(name:'Kupert and Kim', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://drscdn.500px.org/photo/107607635/q%3D80_m%3D2000/59ba5434c49445f31a4495117fe8a912", capacity: 1000, category_id: 2)
+the_office = Restaurant.create(name:'The Office Pub', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "https://s-media-cache-ak0.pinimg.com/736x/d3/a3/76/d3a376bf640ec69367d87050596dafc4.jpg", capacity: 70, category_id: 1)
+the_office = Restaurant.create(name:'Buk Chang Dong Soon Tofu', opening: '2000-01-01 12:00:00' , closing: '2000-01-01 23:59:00', img_link: "http://www.rwsentosa.com/Portals/0/RWS%20Revamp/FNB/Insadong/Insadong-Bimbibap.jpg", capacity: 50, category_id: 2)
+
 
 reservation1 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 16:00:00', party_size: 5)
 
