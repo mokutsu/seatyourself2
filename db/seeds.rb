@@ -20,4 +20,6 @@ reservation1 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-
 
 admin = Customer.create(name: 'admin', email: 'admin@admin.admin', password: 'admin', password_confirmation: 'admin', account_type:'admin')
 
+notadmin = Customer.create(name: 'jojo', email: 'diner@diner.ca', password: 'diner', password_confirmation: 'diner')
+
 reservation2 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 18:00:00', party_size: 5)

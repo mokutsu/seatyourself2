@@ -33,8 +33,9 @@ body{
  }
 
  .delete_profile{
-   float: right;
-   margin-right: 35%;
+   float: left;
+   display: inline-block;
+   margin-right: 30%;
 
    a{
      color: $red;
@@ -45,12 +46,17 @@ body{
 
  }
 
+.divider {
+  float: left;
+  color: darkgrey;
+}
  .profile_name{
    margin-top:20px;
  }
 
  .update_profile {
    display: inline-block;
+   float: left;
    a{
    color: $red;
    &:hover{
