@@ -16,8 +16,8 @@
 Update Details
 
 <div class = 'flash_notices'>
-  <% if @reservation.errors.any? %>
-    <% @reservation.errors.full_messages.each do |msg| %>
+  <% if @temp_holder != nil && @temp_holder.errors.any? %>
+    <% @temp_holder.errors.full_messages.each do |msg| %>
     <ul>
       <li><%= msg %></li>
     </ul>
@@ -37,11 +37,11 @@ Update Details
       <%= f.label :time %>
       <%= f.select :time, options_for_select(time_options, dropdown)%>
 
-      <%= f.label :party_size %>
-      <%= f.number_field :party_size %>
-
-      <%= f.submit 'Update', class:"form_button" %>
-
+      <% f.label :party_size %>
+      <%= f.select :party_size, options_for_select((1..30),(1..30)) %>
+      <div>
+        <%= f.submit 'Update', class:"form_button" %>
+    </div>
   <% end%>
 
 <%= link_to 'Delete Reservation', [@restaurant, @reservation], method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"}, class:"form_button" %>

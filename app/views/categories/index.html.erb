@@ -1,0 +1,19 @@
+
+<div>
+  <h1> Search by Category </h1>
+</div>
+<% @categories.each do |category| %>
+
+<% if false %>
+  <div class="category">
+    <div class="restaurant_image">
+      <%= link_to image_tag(restaurant.img_link),restaurant_path(restaurant)%>
+    </div>
+<% end %>
+
+    <p class="cat">
+      <ul>
+        <li> <%= link_to category.name, category_path(category) %></p> </li>
+      </ul>
+  </div>
+<% end %>

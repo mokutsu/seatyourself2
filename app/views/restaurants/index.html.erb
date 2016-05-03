@@ -53,14 +53,16 @@
   <h2 class="rest_title">Discover New Restaurants</h2>
   <p class="rest_desc">Treat Your Tastebuds. Eat anywhere, at any time. </p>
 
-
+<div id = 'search options'>
+  <%= link_to 'Search by Category', categories_path %>
+</div>
 
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant">
       <div class="restaurant_image">
         <%= link_to image_tag(restaurant.img_link),restaurant_path(restaurant)%>
       </div>
-      <p class="restaurant_name"><%=restaurant.name%></p>
+      <p class="restaurant_name"><%= link_to(restaurant.name, restaurant_path(restaurant))%></p>
       <p class="restaurant_category"><%=restaurant.category.name%></p>
     </div>
   <% end %>

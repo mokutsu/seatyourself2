@@ -4,11 +4,12 @@ class Restaurant < ActiveRecord::Base
   belongs_to :category
 
   validates :name, presence: true
-
+  validates :img_link, presence: true
 
   def availability(party_size, time)
-     
-     current_capacity(time) - party_size
+     if party_size != nil && time != nil
+       current_capacity(time) - party_size
+     end
    end
 
    def time_range(restaurant)
