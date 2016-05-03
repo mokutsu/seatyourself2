@@ -15,6 +15,10 @@
       <%= f.label :name, "Name"%>
       <%= f.text_field :name %>
     </div>
+    <div>
+      <%= f.label :img_link, "Image Link" %>
+      <%= f.text_field :img_link %>
+    </div>
 
     <div>
       <%= f.label :opening, "Opening Time"%>
@@ -36,6 +40,7 @@
       <%= f.collection_select(:category_id, Category.all, :id, :name) %>
 
     </div>
+
     <div>
       <%= f.submit 'Go! ' %>
     </div>

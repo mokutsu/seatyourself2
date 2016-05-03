@@ -4,7 +4,7 @@ class Restaurant < ActiveRecord::Base
   belongs_to :category
 
   validates :name, presence: true
-
+  validates :img_link, presence: true
 
   def availability(party_size, time)
      if party_size != nil && time != nil

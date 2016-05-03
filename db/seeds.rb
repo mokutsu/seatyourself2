@@ -21,7 +21,7 @@ the_office = Restaurant.create(name:'Buk Chang Dong Soon Tofu', opening: '2000-0
 
 reservation1 = Reservation.create(customer_id: 1, restaurant_id: 1, date: '2016-05-01', time: '2000-01-01 16:00:00', party_size: 5)
 
-admin = Customer.create(name: 'admin', email: 'admin@admin.admin', password: 'admin', password_confirmation: 'admin', account_type:'admin')
+admin = Customer.create(name: 'admin', email: 'admin@admin.admin', password: '12345', password_confirmation: '12345', account_type:'admin')
 
 notadmin = Customer.create(name: 'jojo', email: 'diner@diner.ca', password: 'diner', password_confirmation: 'diner')
 
